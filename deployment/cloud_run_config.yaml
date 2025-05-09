@@ -1,0 +1,18 @@
+# Конфигурация для развертывания контейнеров с использованием Google Cloud Run
+
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  template:
+    spec:
+      containers:
+      - image: gcr.io/my-project/my-image
+        env:
+        - name: ENV_VAR
+          value: "value"
+      resources:
+        limits:
+          cpu: "1000m"
+          memory: "512Mi"

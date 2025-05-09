@@ -1,0 +1,12 @@
+# Конфигурация для автоматического масштабирования и мониторинга
+
+# Настройки автоматического масштабирования
+scaling:
+  min_instances: 1
+  max_instances: 10
+  target_cpu_utilization: 0.6
+
+# Настройки мониторинга
+monitoring:
+  enable_stackdriver: true
+  log_level: INFO
